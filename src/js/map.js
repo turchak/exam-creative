@@ -4,7 +4,7 @@ function initMap() {
     lat: 50.401699,
     lng: 30.252512
   };
-  let image = '/dist/img/contact-map-pin.png'
+  let image = 'dist/img/contact-map-pin.png'
   let map = new google.maps.Map(document.querySelector('.contact__map'), {
     zoom: 10,
     center: kiev,
