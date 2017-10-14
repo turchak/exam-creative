@@ -1,0 +1,90 @@
+.about {
+  padding: 125px 0;
+  font-family: 'PT Sans', sans-serif;
+  font-size: 20px;
+  color: $c-dark-grey;
+  outline: none;
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    @include tab {
+      flex-direction: column;
+    };
+  }
+
+  &__info {
+    width: 54%;
+    @include tab {
+      order: 1;
+      align-items: stretch;
+      width: 100%;
+    };
+  }
+
+  &__img {
+    position: relative;
+    width: 380px;
+    height: 555px;
+    padding-top: 175px;
+    background: url('./img/about.jpg') no-repeat 50% 50%;
+    background-size: cover;
+    font-family: 'Proxima Nova', sans-serif;
+    font-size: 36px;
+    text-align: center;
+    text-transform: uppercase;
+    color: $c-hero-white;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 75px;
+      left: 50%;
+      display: block;
+      mask: url('./img/about-man.svg') no-repeat 50% 50%;
+      background-color: $c-white;
+      width: 51px;
+      height: 54px;
+      transform: translateX(-50%);
+    }
+    @include tab {
+      order: 2;
+      align-self: flex-start;
+    };
+    @include mob {
+      width: 100%;
+    };
+  }
+
+  &__text {
+    &:first-child {
+      margin: 0;
+    }
+
+    &-hero {
+      font-weight: bold;
+    }
+
+    &-info {
+      font-style: italic;
+    }
+  }
+
+  &__button {
+    display: block;
+    width: 195px;
+    height: 50px;
+    border: solid 1px $c-light-grey;
+    margin: 95px 0 0 225px;
+    color: $c-light-grey;
+    font-style: italic;
+    line-height: 50px;
+    text-align: center;
+    @include tab {
+      margin: 20px 0;
+    };
+    @include mob {
+      margin: 20px auto;
+    };
+  }
+}

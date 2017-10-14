@@ -1,0 +1,53 @@
+.footer {
+  background: $c-lilac;
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 185px;
+    @include tab {
+      flex-wrap: wrap;
+      justify-content: space-around;
+    };
+  }
+
+  &__text {
+    font-family: 'PT Sans', sans-serif;
+    font-size: 18px;
+    letter-spacing: 0.4px;
+    color: $c-white;
+
+    &--hero {
+      font-weight: 800;
+    }
+  }
+
+  &__social {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    @include tab {
+      margin: 0 20px;
+    };
+
+    a {
+      display: block;
+      text-align: center;
+      color: $c-lilac;
+    }
+
+    &-item {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: $c-grey;
+      line-height: 32px;
+
+      &:not(:first-child) {
+        margin-left: 12px;
+      }
+    }
+  }
+}

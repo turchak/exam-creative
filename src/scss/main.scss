@@ -1,0 +1,17 @@
+//media-queries
+@import "helpers/media-queries";
+
+//common
+@import "common/fonts";
+@import "common/variables";
+@import "common/common";
+@import "common/mixins";
+
+//sections
+@import "sections/header";
+@import "sections/about";
+@import "sections/services";
+@import "sections/works";
+@import "sections/team";
+@import "sections/contact";
+@import "sections/footer";

@@ -1,0 +1,101 @@
+.works {
+  background: url('./img/works-bg.jpg') no-repeat 50% 50%;
+  background-size: cover;
+  outline: none;
+
+  &__container {
+    padding: 40px 0;
+  }
+
+  &__icon {
+    display: block;
+    margin: 0 auto;
+    width: 40px;
+    height: 60px;
+    fill: $c-white;
+  }
+
+  &__title {
+    @include title;
+  }
+
+  &__hero {
+    position: relative;
+    padding-bottom: 50px;
+  }
+
+  &__slider {
+    max-width: 730px;
+    padding-top: 75px;
+    margin: 0 auto;
+
+    button[class^="ion-ios-circle"] {
+      position: absolute;
+      bottom: 0;
+      color: $c-grey;
+
+      &:nth-of-type(3) {
+        left: calc(50% - 30px);
+        transform: translateX(-50%);
+      }
+
+      &:nth-of-type(4) {
+        left: 50%;
+        transform: translateX(-50%);
+      }
+
+      &:nth-of-type(5) {
+        left: calc(50% + 30px);
+        transform: translateX(-50%);
+      }
+    }
+
+    button[class^="ion-ios-arrow"] {
+      position: absolute;
+      padding: 0;
+      border: none;
+      background: transparent;
+      font-size: 60px;
+      color: $c-white;
+      @include tab {
+        display: none;
+      };
+
+      &:nth-of-type(1) {
+        left: 15px;
+        top: 50%;
+      }
+
+      &:nth-of-type(2) {
+        right: 15px;
+        top: 50%;
+      }
+    }
+
+    button[class^="ion-ios-circle"] {
+      border: none;
+      background: transparent;
+    }
+
+    &-img {
+      @include tab {
+        width: 100%;
+      };
+    }
+    @include tab {
+      width: 100%;
+      text-align: center;
+    };
+  }
+
+  &__button {
+    display: block;
+    @include button;
+    margin: 50px auto 0;
+    color: $c-white;
+    border-color: $c-white;
+    @include tab {
+      margin: 50px auto 0;
+    };
+  }
+}

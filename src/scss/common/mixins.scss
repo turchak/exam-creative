@@ -1,0 +1,28 @@
+@mixin button {
+  display: block;
+  width: 195px;
+  height: 50px;
+  border: solid 1px $c-light-grey;
+  margin: 95px 0 0 225px;
+  color: $c-light-grey;
+  font-style: italic;
+  line-height: 50px;
+  text-align: center;
+  @include tab {
+    margin: 20px 0;
+  };
+  @include mob {
+    margin: 20px auto;
+  };
+}
+
+@mixin title {
+  padding-top: 30px;
+  margin: 0;
+  font-family: 'Proxima Nova', sans-serif;
+  font-size: 36px;
+  font-weight: 600;
+  color: $c-simple-white;
+  text-align: center;
+  text-transform: uppercase;
+}
